@@ -42,11 +42,21 @@ function setup() {
 
 function draw() {
   background(bgImg);
+  star.x=starBody.postion.x;
+  star.y=starBody.postion.y;
    drawSprites();
 
 }
 
 function keyPressed() {
-	//write code here
-	
+	if(keyCode === DOWN_ARROW){
+	   Matter.body.setStactic(starBody,false);
+	}
+	if(keyCode === RIGHT_ARROW){
+		fairy.x=fairy.x+20;
+	}
+	if(keyCode === LEFT_ARROW){
+		fairy.x=fairy.x-20;
+	}
+
 }

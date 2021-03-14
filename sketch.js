@@ -1,16 +1,16 @@
+const Engine = Matter.Engine;
+const World = Matter.World;
+const Bodies = Matter.Bodies;
+
 var starImg, fairyImg, bgImg;
 var fairy , fairyVoice;
 var star, starBody;
 
-const Engine = Matter.Engine;
-const World = Matter.World;
-const Bodies = Matter.Bodies;
-const Body = Matter.Body;
-
 function preload() { 
-	starImg = loadImage("star.png");
-	 fairyImg = loadAnimation("fairyImage1.png","fairyImage2.png");
-	 bgImg = loadImage("starNight.png"); fairyVoice = loadSound("JoyMusic.mp3");
+	starImg = loadImage("images/star.png");
+	fairyImg = loadAnimation("images/fairyImage1.png","images/fairyImage2.png");
+	bgImg = loadImage("images/starNight.png"); 
+	fairyVoice = loadSound("sound/JoyMusic.mp3");
 }
 
 
@@ -47,8 +47,8 @@ function draw() {
 }
 
 function keyPressed() {
-	if(keyCode === DOWN_ARROW){
-	   Matter.body.setStactic(starBody,false);
+	if(keCode === DOWN_ARROW)){
+	   star.velocityY = 4;
 	}
 	if(keyCode === RIGHT_ARROW){
 		fairy.x=fairy.x+20;

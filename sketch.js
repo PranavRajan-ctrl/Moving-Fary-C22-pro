@@ -40,8 +40,12 @@ function setup() {
 
 function draw() {
   background(bgImg);
-  star.x=starBody.position.x;
-  star.y=starBody.position.y;
+  //star.x=starBody.position.x;
+  //star.y=starBody.position.y;
+
+  if(star.y > 470){
+	star.velocityY -4;
+  }
    drawSprites();
 
 }

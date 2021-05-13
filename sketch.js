@@ -51,7 +51,7 @@ function draw() {
 }
 
 function keyPressed() {
-	if(keCode === DOWN_ARROW)){
+	if(keCode === DOWN_ARROW){
 	   star.velocityY = 4;
 	}
 	if(keyCode === RIGHT_ARROW){

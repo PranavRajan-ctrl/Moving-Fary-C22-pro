@@ -44,14 +44,14 @@ function draw() {
   //star.y=starBody.position.y;
 
   if(star.y > 470){
-	star.velocityY -4;
+	star.y = 470;
   }
    drawSprites();
 
 }
 
 function keyPressed() {
-	if(keCode === DOWN_ARROW){
+	if(keyCode === DOWN_ARROW){
 	   star.velocityY = 4;
 	}
 	if(keyCode === RIGHT_ARROW){
@@ -60,5 +60,4 @@ function keyPressed() {
 	if(keyCode === LEFT_ARROW){
 		fairy.x=fairy.x-20;	
 	}
-
 }
